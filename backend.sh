@@ -37,7 +37,7 @@ echo "Script started executing at: $(date)" | tee -a $LOG_FILE
 CHECK_ROOT
 dnf module disable nodejs -y &>>LOG_FILE
 VALIDATE $? "disable default nodejs"
-dnf module enable nodjs:20 -y &>>L0G_FILE
+dnf module enable nodejs:20 -y &>>L0G_FILE
 VALIDATE $? "enabled nodejs:20"
 dnf install nodejs -y
 VALIDATE $? "INSTALL NODE JS"
