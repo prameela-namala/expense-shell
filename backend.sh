@@ -39,7 +39,7 @@ dnf module disable nodejs -y &>>LOG_FILE
 VALIDATE $? "disable default nodejs"
 dnf module enable nodejs:20 -y &>>L0G_FILE
 VALIDATE $? "enabled nodejs:20"
-dnf install nodejs -y
+dnf install nodejs -y &>>L0G_FILE
 VALIDATE $? "INSTALL NODE JS"
 
 id expense &>>LOG_FILE
