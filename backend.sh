@@ -59,7 +59,7 @@ VALIDATE $? "Downloading backend application code"
 cd /app
 rm -rf /app/*
 
-unzip /tmp/backend.zip
+unzip /tmp/backend.zip &>>LOG_FILE
 VALIDATE $? "extracting backend app code" &>>LOG_FILE
 npm install &>>LOG_FILE
 cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.service
