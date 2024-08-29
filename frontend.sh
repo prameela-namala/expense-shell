@@ -54,7 +54,7 @@ cd /usr/share/nginx/html
 unzip /tmp/frontend.zip &>>$LOG_FILE
 VALIDATE $? "Extract frontend code"
 
-cp /home/ec2-user/expense-shell/frontend.config /etc/nginx/default.d/frontend.config
+cp /home/ec2-user/expense-shell/frontend.conf /etc/nginx/default.d/frontend.conf
 VALIDATE $? "Copied expense conf"
 
 systemctl restart nginx &>>$LOG_FILE
